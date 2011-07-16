@@ -14,10 +14,13 @@ $cumulativeGpa = '3.71';
 
 
 # skills
-$resumeData['computer skills'][] = 'Windows, Mac, Unix, and Android';
-$resumeData['computer skills'][] = 'HTML, CSS, JavaScript, PHP, and MySQL';
-$resumeData['computer skills'][] = 'Batch, Bash, Ruby, and Perl';
-$resumeData['computer skills'][] = 'C, C++, Java using Object Oriented Programming';
+$resumeData['computer skills'] = array(
+	'Windows, Mac, Unix, and Android',
+	'SVN, Git, and Perforce',
+	'Batch, Bash, Ruby, and Perl',
+	'HTML, CSS, JavaScript, PHP, and MySQL',
+	'C, C++, Java using Object Oriented Programming'
+);
 
 
 
