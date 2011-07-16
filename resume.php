@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 $name = ucwords('Nathan T Radebaugh');
 $address = strtoupper('3843 ridgeway dr<br>allison park pa 15101');
 $phone = '412-225-5185';
@@ -228,3 +230,17 @@ foreach ($resumeData['activities'] as $array){
 </tbody></table>
 </body>
 </html>
+<?php
+$resumeHtml = ob_get_contents();
+ob_end_flush();
+
+$fh = fopen('resume.html','w') or die('can\'t open resume.html for writing');
+fwrite($fh,$resumeHtml);
+fclose($fh);
+?>
+
+
+
+
+
+
