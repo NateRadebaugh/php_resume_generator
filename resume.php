@@ -19,7 +19,7 @@ $resumeData['computer skills'] = array(
 	'SVN, Git, and Perforce',
 	'Batch, Bash, Ruby, and Perl',
 	'HTML, CSS, JavaScript, PHP, and MySQL',
-	'C, C++, Java using Object Oriented Programming'
+	'C, C++, and Java using Object Oriented Programming'
 );
 
 
@@ -86,7 +86,7 @@ $resumeData['education']['Religious Studies'] = array(
 
 # related courses
 //$resumeData['related courses'][] = 'Calculus I, II, III. Linear Algebra';
-$resumeData['related courses'][] = 'System Programming';
+$resumeData['related courses'][] = 'Systems Programming';
 $resumeData['related courses'][] = 'Computer Architecture';
 $resumeData['related courses'][] = 'Data Structures and Algorithms';
 $resumeData['related courses'][] = 'Foundations of Computer Science (Discrete Mathematics)';
