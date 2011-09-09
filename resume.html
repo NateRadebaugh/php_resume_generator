@@ -1,119 +1,183 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html style="font-family:Arial"><head><meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <title>Resume for Nathan T Radebaugh</title>
 <style type="text/css">
 	table, html {
-		font-size : 90%;
+		font-size : 90%;  
+		font-family : "Helvetica Neue", Arial;
 	}
 	table {
 		width : 100%;
 	}
-	table td {
+	*, table td {
 		vertical-align : top;
 	}
 	td {
-		padding : 5 0 0 0;
+		padding : 1 0 0 0;
 		width : 300px;
 	}
+	td:first-child {
+		text-align : left;
+	}
+	td:last-child {
+		text-align : right;
+		white-space : nowrap;
+	}
 	.first {
-		width : 400px !important;
+		width : 500px !important;
 	}
 	p, ul, ul li {
 		margin : 0;
 		padding : 0;
 	}
 	ul {
-		margin-left : 30px;
+		margin-left : 20px;
+		text-align : left;
+		white-space : normal;
 	}
-	hr {
-		margin : 5px 0 5px 0;
-		border:1px solid #999;
+	br {
+		clear : both;
+	}
+	.label, .content {
+		margin-top : 10px;
+		float : left;
+	}
+	.label {
+		clear : left;
+		font-weight : bold;
+		width : 1.5in;
+	}
+	.content {
+		width : 6.5in;
+		clear : right;
+	}
+	#name {
+		font-size : 3em;
+		font-weight : bold;
+		display : inline-block;
+	}
+	#contact {
+		display : inline-block;
+		float : right;
+		text-align : right;
+	}
+	#wrapper {
+		width : 8in;
 	}
 </style>
 </head>
 <body>
-<table><tbody>
-<tr><td style="text-align:left;vertical-align:middle"><strong><font size="+2">Nathan T Radebaugh</font></strong></td><td style="text-align:right">
-<strong>
-3843 RIDGEWAY DR<BR>ALLISON PARK PA 15101<br />
-412-225-5185<br>
-nradebau@cs.purdue.edu</strong></td></tr></tbody></table>
-<hr>
-<p><strong>OBJECTIVE</strong></p>
-<p>To obtain a summer <strong>internship</strong> position at a company in the field of computer science.</p>
-<center><strong>COMPUTER SKILLS</strong><br></center>
-<ul style="list-style:none">
-<li>Windows, Mac, Unix, and Android.</li>
-<li>SVN, Git, and Perforce.</li>
-<li>Batch, Bash, Ruby, and Perl.</li>
-<li>HTML, CSS, JavaScript, PHP, and MySQL.</li>
-<li>C, C++, and Java using Object Oriented Programming.</li>
-</ul>
-<hr>
-<center><strong>EXPERIENCE</strong><br></center>
-<table><tbody>
-<tr>
-<td class="first"><strong>Interim Engineering Intern</strong>
-<ul>
-<li>TD-SCDMA Team</li>
-<li>Wrote tools to automate tests and increase productivity</li>
-<li>Worked on Call Flow Analysis tools</li>
-</ul></td>
-<td>Qualcomm, Inc.</td><td>San Diego, CA</td><td style="text-align:right">May 2011 - August 2011</td></tr><tr>
-<td class="first"><strong>Senior Computer Consultant</strong>
-<ul>
-<li>Manager</li>
-</ul></td>
-<td>Purdue ResNet Services</td><td>West Lafayette, IN</td><td style="text-align:right">Fall 2010 - Present</td></tr><tr>
-<td class="first"><strong>Software Developer</strong>
-<ul>
-<li>Database Administrator</li>
-<li>Web Developer</li>
-</ul></td>
-<td>Purdue ResNet Services</td><td>West Lafayette, IN</td><td style="text-align:right">Spring 2010 - Present</td></tr><tr>
-<td class="first"><strong>Computer Consultant</strong>
-</td>
-<td>Purdue ResNet Services</td><td>West Lafayette, IN</td><td style="text-align:right">Fall 2009 - Spring 2010</td></tr><tr>
-<td class="first"><strong>Web Designer</strong>
-</td>
-<td>The Perfect Pastry</td><td>Allison Park, PA</td><td style="text-align:right">2009</td></tr></tbody></table>
-<hr>
-<center><strong>EDUCATION</strong></center>
-<table><tbody>
-<tr>
-<td style="width:90%"><strong>Bachelor of Science in <big>Computer Science</big>,</strong> Purdue University, West Lafayette, IN</td><td style="text-align:right">2013</td></tr><tr>
-<td style="width:90%"><strong>Minor in <big>Mathematics</big>,</strong> Purdue University, West Lafayette, IN</td><td style="text-align:right">2013</td></tr><tr>
-<td style="width:90%"><strong>Minor in <big>Religious Studies</big>,</strong> Purdue University, West Lafayette, IN</td><td style="text-align:right">2013</td></tr><tr><td>	
-<strong>Cumulative GPA: <big>3.71 / 4.00</big></strong>
-</td></tr>
-</tbody></table>
-<hr>
-<center><strong>RELATED COURSES</strong></center>
-<ul style="list-style:none">
-<li>Systems Programming,</li>
-<li>Computer Architecture,</li>
-<li>Data Structures and Algorithms,</li>
-<li>Foundations of Computer Science (Discrete Mathematics),</li>
-<li>Concurrent Programming in Java.</li>
-</ul>
-<hr>
-<center><strong>ACTIVITIES</strong></center>
-<table><tbody>
-<tr>
-<td><strong>Latin and Ballroom Dance Club</strong></td>
-<td></td>
-<td style="text-align:right">Fall 2010 - Spring 2011</td>
-</tr>
-<tr>
-<td><strong>Purdue Lutheran Ministry</strong></td>
-<td>Vice President of Worship and Service</td>
-<td style="text-align:right">Spring 2010 - Fall 2010</td>
-</tr>
-<tr>
-<td><strong>Fencing Club</strong></td>
-<td></td>
-<td style="text-align:right">Fall 2009</td>
-</tr>
-</tbody></table>
+<div id="wrapper">
+<div>
+	<div id="name">Nathan T Radebaugh</div>
+	<div id="contact">
+	Hillenbrand Hall, Mailbox #696<br />
+1301 Third Street Dr.<br />
+West Lafayette, IN 47906<br />
+	530-628-3723 (mobile)<br />      
+	nate.radebaugh@gmail.com<br />
+	www.naterad.com	</div>
+</div>
+	<br />
+	
+	<div class="label">Objective:</div>
+	<div class="content">
+	To obtain a summer <strong class="highlight">internship</strong> position within the field of software engineering.	</div>
+	<div class="label">Software Skills:</div>
+	<div class="content">
+	Windows, Mac, Unix, and Android. SVN, Git, and Perforce. Batch, Bash, Ruby, and Perl. HTML, CSS, JavaScript, PHP, and MySQL. C, C++, and Java using Object Oriented Programming. 	</div>
+	<div class="label">Education:</div>
+	<div class="content">
+			<table><tbody>
+						<tr>
+				<td style="width:90%"><strong>Purdue University</strong>, West Lafayette, IN</td>
+				<td>May 2013 (expected)</td>
+			</tr>
+						<tr>
+				<td colspan="2" style="text-align:left">B.S., <i>Computer Science, concentration in Software Engineering and Programming Languages</i></td>
+			</tr>
+		</tbody></table>
+			<table><tbody>
+						<tr>
+				<td colspan="2" style="text-align:left">Minor, <i>Mathematics</i></td>
+			</tr>
+		</tbody></table>
+			<table><tbody>
+						<tr>
+				<td colspan="2" style="text-align:left">Minor, <i>Religious Studies</i></td>
+			</tr>
+		</tbody></table>
+		</div>
+	<div class="label">Related Courses:</div>
+	<div class="content">
+	<table><tbody>
+	<tr>		<td style="text-align:left">Operating Systems</td>
+			<td style="text-align:left">Software Engineering</td>
+	</tr><tr>		<td style="text-align:left">Web Information Retrieval and Management</td>
+			<td style="text-align:left">Systems Programming : A</td>
+	</tr><tr>		<td style="text-align:left">Computer Architecture : B</td>
+			<td style="text-align:left">Data Structures and Algorithms : A-</td>
+	</tr><tr>		<td style="text-align:left">Foundations of Computer Science (Discrete Mathematics) : B</td>
+			<td style="text-align:left">Concurrent Programming in Java : A</td>
+	</tr>	</tbody></table>
+	<strong style="display:inline-block;margin-top:0.25em">Cumulative GPA: 3.71 / 4.00</strong>
+	</div>
+	<div class="label">Work Experience:</div>
+	<div class="content">
+			<div style="padding-bottom : 0.25em"><strong>Qualcomm, Inc.</strong>, San Diego, CA<span style="float:right">May 2011 - August 2011</span><br /><span style="font-style: italic">Interim Engineering Intern</span></div>
+				<ul style="padding-bottom : 0.5em">
+							<li>Wrote tools using Batch, Perl, Visual C++ and the MFC framework to automate the running of tests on an external server, generate regression reports, and send out emails, resulting in an over 705% increase in test productivity.</li>
+							<li>Wrote PHP and C++ scripts to streamline the creation and maintenance of Call Flow Analysis log parser tools.</li>
+							<li>Performed low level structure analysis and alignment, resulting in smaller data packets and faster data transfer speeds.</li>
+							<li>Wrote Ruby scripts to analyze header files and automatically refactor and decouple header files, significantly decreasing compile times.</li>
+					</ul>
+				</tr>
+			<div style="padding-bottom : 0.25em"><strong>Purdue ResNet</strong>, West Lafayette, IN<span style="float:right">Fall 2010 - Present</span><br /><span style="font-style: italic">Senior Computer Consultant</span></div>
+				<ul style="padding-bottom : 0.5em">
+							<li>Supervised ResNet Employees</li>
+							<li>Active role in the interviewing, hiring, and training of new employees</li>
+					</ul>
+				</tr>
+			<div style="padding-bottom : 0.25em"><strong>Purdue ResNet</strong>, West Lafayette, IN<span style="float:right">Spring 2010 - Present</span><br /><span style="font-style: italic">Software Developer</span></div>
+				<ul style="padding-bottom : 0.5em">
+							<li>Led a team of eight student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP Framework FuelPHP.</li>
+							<li>Developed PHP and Perl scripts to help monitor usage across the network.</li>
+							<li>Administered multiple Linux web and database servers used for development and production environments.</li>
+					</ul>
+				</tr>
+			<div style="padding-bottom : 0.25em"><strong>Purdue ResNet</strong>, West Lafayette, IN<span style="float:right">Fall 2009 - Spring 2010</span><br /><span style="font-style: italic">Computer Consultant</span></div>
+				<ul style="padding-bottom : 0.5em">
+							<li>Provided telephone and onsite support for over 10,000 ResNet internet users</li>
+					</ul>
+				</tr>
+			<div style="padding-bottom : 0.25em"><strong>The Perfect Pastry</strong>, Allison Park, PA<span style="float:right">2009</span><br /><span style="font-style: italic">Web Designer</span></div>
+				<ul style="padding-bottom : 0.5em">
+							<li>Worked with a client to create a website for a local bakery using HTML, CSS, JavaScript, and PHP.</li>
+					</ul>
+				</tr>
+		</div>
+	<div class="label">Activities:</div>
+	<div class="content">
+	<table><tbody>      
+		<tr>
+		<td><strong>Latin and Ballroom Dance Club</strong></td>
+		<td style="text-align : center"></td>
+		<td>Fall 2010 - Spring 2011</td>
+	</tr>
+		<tr>
+		<td><strong>Purdue Lutheran Ministry</strong></td>
+		<td style="text-align : center">VP of Worship and Service</td>
+		<td>Spring 2010 - Present</td>
+	</tr>
+		<tr>
+		<td><strong>Fencing Club</strong></td>
+		<td style="text-align : center"></td>
+		<td>Fall 2009</td>
+	</tr>
+		</tbody></table>
+	</div>
+</div>
 </body>
 </html>
