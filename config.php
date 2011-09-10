@@ -16,7 +16,8 @@ $maximumGpa = '4.00';
 
 
 # skills
-$resumeData['computer skills'] = array(
+$resumeData['skills']['*display'] = 'Software Skills';
+$resumeData['skills']['skills'] = array(
 	'Windows, Mac, Unix, and Android',
 	'SVN, Git, and Perforce',
 	'Batch, Bash, Ruby, and Perl',
@@ -28,6 +29,7 @@ $resumeData['computer skills'] = array(
 
 
 # experience
+$resumeData['experience']['*display'] = 'Work Experience';
 $resumeData['experience']['Interim Engineering Intern'] = array(
 	'Qualcomm, Inc.',
 	'San Diego, CA',
@@ -77,6 +79,7 @@ $resumeData['experience']['Web Designer'] = array(
 
 
 # education
+$resumeData['education']['*display'] = 'Education';
 $resumeData['education']['Computer Science, concentration in Software Engineering and Programming Languages'] = array(
 	'B.S.',
 	'Purdue University',
@@ -92,6 +95,7 @@ $resumeData['education']['Religious Studies'] = array(
 
 
 # related courses
+$resumeData['related courses']['*display'] = 'Related Courses';
 $resumeData['related courses'] = array(
 	'Operating Systems',
 	'Software Engineering',
@@ -105,15 +109,21 @@ $resumeData['related courses'] = array(
 
 
 # activities
+$resume['activities']['*display'] = 'Activities';
 $resumeData['activities'][] = array(
-	'Latin and Ballroom Dance Club',
-	'',
-	'Fall 2010 - Spring 2011'
+	'Tomahawk Leadership Society',
+	'Webmaster',
+	'Spring 2011 - Present'
 );
 $resumeData['activities'][] = array(
 	'Purdue Lutheran Ministry',
 	'VP of Worship and Service',
 	'Spring 2010 - Present'
+);
+$resumeData['activities'][] = array(
+	'Latin and Ballroom Dance Club',
+	'',
+	'Fall 2010 - Spring 2011'
 );
 $resumeData['activities'][] = array(
 	'Fencing Club',

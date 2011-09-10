@@ -89,15 +89,35 @@ include("config.php");
 	<div class="content">
 	<?php echo str_replace($important,'<strong>'.$important.'</strong>',$objective); ?>
 	</div>
-	<div class="label">Software Skills:</div>
+	<div class="label"><?php
+	if (empty($resumeData['skills']['*display']) === false)
+	{
+		echo $resumeData['skills']['*display'];
+	}
+	else
+	{
+		echo 'Skills';
+	}
+	unset($resumeData['skills']['*display']);
+	?>:</div>
 	<div class="content">
 	<?php
-	foreach ($resumeData['computer skills'] as $skill){
+	foreach ($resumeData['skills']['skills'] as $skill){
 	    echo $skill.'. ';
 	}
 	?>
 	</div>
-	<div class="label">Education:</div>
+	<div class="label"><?php
+	if (empty($resumeData['education']['*display']) === false)
+	{
+		echo $resumeData['education']['*display'];
+	}
+	else
+	{
+		echo 'Education';
+	}
+	unset($resumeData['education']['*display']);
+	?>:</div>
 	<div class="content">
 	<?php
 	foreach ($resumeData['education'] as $category => $information){
@@ -122,7 +142,17 @@ include("config.php");
 	?>
 	</div>
 <?php if (count($resumeData) > 0){ ?>
-	<div class="label">Related Courses:</div>
+	<div class="label"><?php
+	if (empty($resumeData['related courses']['*display']) === false)
+	{
+		echo $resumeData['related courses']['*display'];
+	}
+	else
+	{
+		echo 'Related Courses';
+	}
+	unset($resumeData['related courses']['*display']);
+	?>:</div>
 	<div class="content">
 	<table><tbody>
 	<?php
@@ -149,7 +179,17 @@ include("config.php");
 <?php } ?>
 
 <?php if ( count($resumeData['experience']) > 0){ ?>
-	<div class="label">Work Experience:</div>
+	<div class="label"><?php
+	if (empty($resumeData['experience']['*display']) === false)
+	{
+		echo $resumeData['experience']['*display'];
+	}
+	else
+	{
+		echo 'Work Experience';
+	}
+	unset($resumeData['experience']['*display']);
+	?>:</div>
 	<div class="content">
 	<?php foreach ($resumeData['experience'] as $category => $information)
 	{
@@ -171,7 +211,17 @@ include("config.php");
 	</div>
 <?php } ?>
 <?php if ( count($resumeData['activities']) > 0){ ?>
-	<div class="label">Activities:</div>
+	<div class="label"><?php
+	if (empty($resumeData['activities']['*display']) === false)
+	{
+		echo $resumeData['activities']['*display'];
+	}
+	else
+	{
+		echo 'Activities';
+	}
+	unset($resumeData['activities']['*display']);
+	?>:</div>
 	<div class="content">
 	<table><tbody>      
 	<?php
