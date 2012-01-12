@@ -87,8 +87,21 @@ include("config.php");
 	
 	<div class="label">Objective:</div>
 	<div class="content">
-	<?php echo str_replace($important,'<strong>'.$important.'</strong>',$objective); ?>
+	<?php
+	if (isset($important) === true)
+	{
+		echo str_replace($important,'<strong>'.$important.'</strong>',$objective);
+	}
+	else
+	{
+		echo $objective;
+	}
+	?>
 	</div>
+	<?php
+	if (empty($resumeData['skills']) === false)
+	{
+	?>
 	<div class="label"><?php
 	if (empty($resumeData['skills']['*display']) === false)
 	{
@@ -107,7 +120,11 @@ include("config.php");
 	}
 	?>
 	</div>
+	<?php
+	}
+	?>
 	<div class="label"><?php
+	if (empty($resumeData['education']) === false)
 	if (empty($resumeData['education']['*display']) === false)
 	{
 		echo $resumeData['education']['*display'];
@@ -143,6 +160,7 @@ include("config.php");
 	</div>
 <?php if (count($resumeData) > 0){ ?>
 	<div class="label"><?php
+	if (empty($resumeData['related courses']) === false)
 	if (empty($resumeData['related courses']['*display']) === false)
 	{
 		echo $resumeData['related courses']['*display'];
@@ -173,12 +191,12 @@ include("config.php");
 	?>
 	</tbody></table>
 <?php if ( empty($cumulativeGpa) === false && empty($maximumGpa) === false ){ ?>
-	<strong style="display:inline-block;margin-top:0.25em">Cumulative GPA: <?php echo $cumulativeGpa; ?> / <?php echo $maximumGpa; ?></strong>
+	<strong style="display:inline-block;margin-top:0.25em"><?php echo $gpaLabel; ?> GPA: <?php echo $cumulativeGpa; ?> / <?php echo $maximumGpa; ?></strong>
 <?php } ?>
 	</div>
 <?php } ?>
 
-<?php if ( count($resumeData['experience']) > 0){ ?>
+<?php if (count($resumeData['experience']) > 0){ ?>
 	<div class="label"><?php
 	if (empty($resumeData['experience']['*display']) === false)
 	{
@@ -230,13 +248,44 @@ include("config.php");
 		$club = 0;
 		$position = 1;
 		$dates = 2;
-	?>
-	<tr>
-		<td><strong><?php echo $array[$club];?></strong></td>
-		<td style="text-align : center"><?php echo $array[$position];?></td>
-		<td><?php echo $array[$dates];?></td>
-	</tr>
-	<?php
+		$description = 3;
+		?>
+		<tr>
+		<?php
+		if (empty($array[$position]) === false)
+		{
+		?>
+			<td><strong><?php echo $array[$club];?></strong></td>
+			<td style="text-align : right"><?php echo $array[$position];?></td>
+		<?php
+		}
+		else
+		{
+		?>
+			<td colspan="2"><strong><?php echo $array[$club];?></strong></td>
+		<?php			
+		}
+		?>
+			<td><?php echo $array[$dates];?></td>
+		</tr>
+		<?php
+		if (empty($array[$description]) === false && is_array($array[$description]) === true)
+		{
+		?>
+		<tr>
+			<td colspan="3">
+				<?php
+				echo '<ul>';
+				foreach ($array[$description] as $item)
+				{
+					echo '<li>'.$item.'</li>';;
+				}
+				echo '</ul>';
+				?>
+			</td>
+		</tr>
+		<?php
+		}
 	}
 	?>
 	</tbody></table>
