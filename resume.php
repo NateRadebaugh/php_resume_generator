@@ -3,72 +3,75 @@ ob_start();
 include("config.php");
 ?>
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <title>Resume for <?php echo $name; ?></title>
 <style type="text/css">
-	table, html {
-		font-size : 90%;  
-		font-family : "Helvetica Neue", Arial;
+	table,
+	html {
+		font-size: 90%;  
+		font-family: "Helvetica Neue", Arial;
 	}
 	table {
-		width : 100%;
+		width: 100%;
 	}
-	*, table td {
-		vertical-align : top;
+	*,
+	table td {
+		vertical-align: top;
 	}
 	td {
-		padding : 1 0 0 0;
-		width : 300px;
+		padding: 1 0 0 0;
+		width: 300px;
 	}
 	td:first-child {
-		text-align : left;
+		text-align: left;
 	}
 	td:last-child {
-		text-align : right;
-		white-space : nowrap;
+		text-align: right;
+		white-space: nowrap;
 	}
 	.first {
-		width : 500px !important;
+		width: 500px !important;
 	}
-	p, ul, ul li {
-		margin : 0;
-		padding : 0;
+	p,
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
 	}
 	ul {
-		margin-left : 20px;
-		text-align : left;
-		white-space : normal;
+		margin-left: 20px;
+		text-align: left;
+		white-space: normal;
 	}
 	br {
-		clear : both;
+		clear: both;
 	}
 	.label, .content {
-		margin-top : 10px;
-		float : left;
+		margin-top: 10px;
+		float: left;
 	}
 	.label {
-		clear : left;
-		font-weight : bold;
-		width : 1.5in;
+		clear: left;
+		font-weight: bold;
+		width: 1.5in;
 	}
 	.content {
-		width : 6.5in;
-		clear : right;
+		width: 6.5in;
+		clear: right;
 	}
 	#name {
-		font-size : 3em;
-		font-weight : bold;
-		display : inline-block;
+		font-size: 3em;
+		font-weight: bold;
+		display: inline-block;
 	}
 	#contact {
-		display : inline-block;
-		float : right;
-		text-align : right;
+		display: inline-block;
+		float: right;
+		text-align: right;
 	}
 	#wrapper {
-		width : 8in;
+		width: 8in;
 	}
 </style>
 </head>
@@ -77,9 +80,9 @@ include("config.php");
 <div>
 	<div id="name"><?php echo $name; ?></div>
 	<div id="contact">
-	<?php echo $address; ?><br />
-	<?php echo $phone; ?><br />      
-	<?php echo $email; ?><br />
+	<?php echo $address; ?><br>
+	<?php echo $phone; ?><br>
+	<?php echo $email; ?><br>
 	<?php echo $website; ?>
 	</div>
 </div>
@@ -88,163 +91,141 @@ include("config.php");
 	<div class="label">Objective:</div>
 	<div class="content">
 	<?php
-	if (isset($important) === true)
-	{
-		echo str_replace($important,'<strong>'.$important.'</strong>',$objective);
-	}
-	else
-	{
+	if (isset($important) === true):
+		echo str_replace($important, '<strong>'.$important.'</strong>', $objective);
+	else:
 		echo $objective;
-	}
+	endif;
 	?>
 	</div>
+	<?php if (empty($resume_data['skills']) === false): ?>
+		<div class="label"><?php
+		if (empty($resume_data['skills']['*display']) === false):
+			echo $resume_data['skills']['*display'];
+		else:
+			echo 'Skills';
+		endif;
+		unset($resume_data['skills']['*display']);
+		?>:</div>
+		<div class="content">
+		<?php
+		foreach ($resume_data['skills']['skills'] as $skill):
+		    echo $skill.'. ';
+		endforeach;
+		?>
+		</div>
 	<?php
-	if (empty($resumeData['skills']) === false)
-	{
+	endif;
 	?>
 	<div class="label"><?php
-	if (empty($resumeData['skills']['*display']) === false)
-	{
-		echo $resumeData['skills']['*display'];
-	}
-	else
-	{
-		echo 'Skills';
-	}
-	unset($resumeData['skills']['*display']);
-	?>:</div>
-	<div class="content">
-	<?php
-	foreach ($resumeData['skills']['skills'] as $skill){
-	    echo $skill.'. ';
-	}
-	?>
-	</div>
-	<?php
-	}
-	?>
+	if (empty($resume_data['education']) === false):
+		if (empty($resume_data['education']['*display']) === false):
+			echo $resume_data['education']['*display'];
+		else:
+			echo 'Education';
+		endif;
+		unset($resume_data['education']['*display']);
+		?>:</div>
+		<div class="content">
+		<?php
+		foreach ($resume_data['education'] as $category => $information):
+			$degree_type = 0;
+			$school_name = 1;
+			$school_location = 2;
+			$grad_date = 3;
+		?>
+			<table><tbody>
+				<?php if (empty($information[$school_name]) === false && empty($information[$school_location]) === false && empty($information[$grad_date]) === false): ?>
+				<tr>
+					<td style="width: 90%"><strong><?php echo $information[$school_name];?></strong>, <?php echo $information[$school_location]; ?></td>
+					<td><?php echo $information[$grad_date]; ?></td>
+				</tr>
+				<?php endif; ?>
+				<tr>
+					<td colspan="2" style="text-align: left; padding-left: 1.5em"><?php echo $information[$degree_type];?>, <i><?php echo $category; ?></i></td>
+				</tr>
+			</tbody></table>
+		<?php
+		endforeach;
+		?>
+		</div>
+		<?php
+	endif;
+
+	if (count($resume_data) > 0): ?>
 	<div class="label"><?php
-	if (empty($resumeData['education']) === false)
-	if (empty($resumeData['education']['*display']) === false)
-	{
-		echo $resumeData['education']['*display'];
-	}
-	else
-	{
-		echo 'Education';
-	}
-	unset($resumeData['education']['*display']);
-	?>:</div>
-	<div class="content">
-	<?php
-	foreach ($resumeData['education'] as $category => $information){
-		$degree_type = 0;
-		$school_name = 1;
-		$school_location = 2;
-		$grad_date = 3;
-	?>
-		<table><tbody>
-			<?php if ( empty($information[$school_name]) === false && empty($information[$school_location]) === false && empty($information[$grad_date]) === false){ ?>
-			<tr>
-				<td style="width:90%"><strong><?php echo $information[$school_name];?></strong>, <?php echo $information[$school_location]; ?></td>
-				<td><?php echo $information[$grad_date]; ?></td>
-			</tr>
-			<?php } ?>
-			<tr>
-				<td colspan="2" style="text-align:left"><?php echo $information[$degree_type];?>, <i><?php echo $category; ?></i></td>
-			</tr>
-		</tbody></table>
-	<?php
-	}
-	?>
-	</div>
-<?php if (count($resumeData) > 0){ ?>
-	<div class="label"><?php
-	if (empty($resumeData['related courses']) === false)
-	if (empty($resumeData['related courses']['*display']) === false)
-	{
-		echo $resumeData['related courses']['*display'];
-	}
-	else
-	{
+	if (empty($resume_data['related courses']) === false)
+	if (empty($resume_data['related courses']['*display']) === false):
+		echo $resume_data['related courses']['*display'];
+	else:
 		echo 'Related Courses';
-	}
-	unset($resumeData['related courses']['*display']);
+	endif;
+	unset($resume_data['related courses']['*display']);
 	?>:</div>
 	<div class="content">
 	<table><tbody>
 	<?php
-	$numCourses = count($resumeData['related courses']);
-	for ($i=0;$i<$numCourses;$i++){
-		if (!($i % 2))
-		{
+	$numCourses = count($resume_data['related courses']);
+	for ($i=0;$i<$numCourses;$i++):
+		if (!($i % 2)):
 			echo '<tr>';
-		}
+		endif;
 	?>
-		<td style="text-align:left"><?php echo $resumeData['related courses'][$i]; ?></td>
+		<td style="text-align: left"><?php echo $resume_data['related courses'][$i]; ?></td>
 	<?php
-		if ($i % 2)
-		{
+		if ($i % 2):
 			echo '</tr>';
-		}
-	}
+		endif;
+	endfor;
 	?>
 	</tbody></table>
-<?php if ( empty($cumulativeGpa) === false && empty($maximumGpa) === false ){ ?>
-	<strong style="display:inline-block;margin-top:0.25em"><?php echo $gpaLabel; ?> GPA: <?php echo $cumulativeGpa; ?> / <?php echo $maximumGpa; ?></strong>
-<?php } ?>
+<?php if (empty($shown_gpa) === false && empty($maximum_gpa) === false ): ?>
+	<strong style="display: inline-block; margin-top: 0.25em"><?php echo $shown_gpa_type; ?> GPA: <?php echo $shown_gpa; ?> / <?php echo $maximum_gpa; ?></strong>
+<?php endif; ?>
 	</div>
-<?php } ?>
+<?php endif; ?>
 
-<?php if (count($resumeData['experience']) > 0){ ?>
+<?php if (count($resume_data['experience']) > 0): ?>
 	<div class="label"><?php
-	if (empty($resumeData['experience']['*display']) === false)
-	{
-		echo $resumeData['experience']['*display'];
-	}
-	else
-	{
+	if (empty($resume_data['experience']['*display']) === false):
+		echo $resume_data['experience']['*display'];
+	else:
 		echo 'Work Experience';
-	}
-	unset($resumeData['experience']['*display']);
+	endif;
+	unset($resume_data['experience']['*display']);
 	?>:</div>
 	<div class="content">
-	<?php foreach ($resumeData['experience'] as $category => $information)
-	{
+	<?php foreach ($resume_data['experience'] as $category => $information):
 		$company = 0;
 		$location = 1;
 		$dates = 2;
 		$details = 3;
 	?>
-		<div style="padding-bottom : 0.25em"><strong><?php echo $information[$company];?></strong>, <?php echo $information[$location];?><span style="float:right"><?php echo $information[$dates];?></span><br /><span style="font-style: italic"><?php echo $category;?></span></div>
-		<?php if (count($information[$details]) > 0){ ?>
-		<ul style="padding-bottom : 0.5em">
-			<?php foreach ($information[$details] as $detail){ ?>
+		<div style="padding-bottom: 0.25em"><strong><?php echo $information[$company];?></strong>, <?php echo $information[$location];?><span style="float:right"><?php echo $information[$dates]; ?></span><br /><span style="font-style: italic"><?php echo $category;?></span></div>
+		<?php if (count($information[$details]) > 0): ?>
+		<ul style="padding-bottom: 0.5em">
+			<?php foreach ($information[$details] as $detail): ?>
 				<li><?php echo $detail; ?></li>
-			<?php } ?>
+			<?php endforeach; ?>
 		</ul>
-		<?php } ?>
+		<?php endif; ?>
 		</tr>
-	<?php } ?>
+	<?php endforeach; ?>
 	</div>
-<?php } ?>
-<?php if ( count($resumeData['activities']) > 0){ ?>
+<?php endif; ?>
+<?php if ( count($resume_data['activities']) > 0): ?>
 	<div class="label"><?php
-	if (empty($resumeData['activities']['*display']) === false)
-	{
-		echo $resumeData['activities']['*display'];
-	}
-	else
-	{
+	if (empty($resume_data['activities']['*display']) === false):
+		echo $resume_data['activities']['*display'];
+	else:
 		echo 'Activities';
-	}
-	unset($resumeData['activities']['*display']);
+	endif;
+	unset($resume_data['activities']['*display']);
 	?>:</div>
 	<div class="content">
 	<table><tbody>      
 	<?php
-	foreach ($resumeData['activities'] as $array)
-	{
+	foreach ($resume_data['activities'] as $array):
 		$club = 0;
 		$position = 1;
 		$dates = 2;
@@ -252,57 +233,47 @@ include("config.php");
 		?>
 		<tr>
 		<?php
-		if (empty($array[$position]) === false)
-		{
+		if (empty($array[$position]) === false):
 		?>
 			<td><strong><?php echo $array[$club];?></strong></td>
-			<td style="text-align : right"><?php echo $array[$position];?></td>
+			<td style="text-align: right"><?php echo $array[$position];?></td>
 		<?php
-		}
-		else
-		{
+		else:
 		?>
 			<td colspan="2"><strong><?php echo $array[$club];?></strong></td>
 		<?php			
-		}
+		endif;
 		?>
-			<td><?php echo $array[$dates];?></td>
+			<td><?php echo $array[$dates]; ?></td>
 		</tr>
-		<?php
-		if (empty($array[$description]) === false && is_array($array[$description]) === true)
-		{
-		?>
+		<?php if (empty($array[$description]) === false && is_array($array[$description]) === true): ?>
 		<tr>
 			<td colspan="3">
 				<?php
 				echo '<ul>';
-				foreach ($array[$description] as $item)
-				{
+				foreach ($array[$description] as $item):
 					echo '<li>'.$item.'</li>';;
-				}
+				endforeach;
 				echo '</ul>';
 				?>
 			</td>
 		</tr>
 		<?php
-		}
-	}
+		endif;
+	endforeach;
 	?>
 	</tbody></table>
 	</div>
-<?php } ?>
+<?php endif; ?>
 </div>
 </body>
 </html>
 <?php
-$resumeHtml = ob_get_contents();
+$resume_html = ob_get_contents();
 ob_end_flush();
 
-$fh = fopen('resume.html','w') or die('can\'t open resume.html for writing');
-fwrite($fh,$resumeHtml);
+$fh = fopen('resume.html', 'w') or die('can\'t open resume.html for writing');
+fwrite($fh, $resume_html);
 fclose($fh);
-?>
-
-
 
 

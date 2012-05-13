@@ -1,26 +1,31 @@
 <?php
 $name = 'Nathan T Radebaugh';
-$address = 'Hillenbrand Hall, Mailbox #696<br />
-1301 Third Street Dr.<br />
-West Lafayette, IN 47906';
+$address = 'Currently interning at Microsoft<br>
+4306 156th Ave. NE DD116<br>
+Redmond, WA 98052
+';
+/*$address = 'Hillenbrand Hall, Mailbox #696<br>
+1301 Third Street Dr.<br>
+West Lafayette, IN 47906';*/
 $phone = '530-628-3723 (mobile)';
 $email = 'nate.radebaugh@gmail.com';
 $website = "www.naterad.com";
 
-$objective = 'To obtain a summer internship position within the field of software engineering.';
-$important = 'internship';
+$objective = 'To obtain a full-time position within the field of software engineering.';
+$important = 'full-time';
 
-$cumulativeGpa = '3.71';
-$maximumGpa = '4.00';
+$shown_gpa_type = 'Cumulative';
+$shown_gpa = '3.71';
+$maximum_gpa = '4.00';
 
 
 
 # skills
-$resumeData['skills']['*display'] = 'Software Skills';
-$resumeData['skills']['skills'] = array(
+$resume_data['skills']['*display'] = 'Software Skills';
+$resume_data['skills']['skills'] = array(
 	'Windows, Mac, Unix, and Android',
 	'SVN, Git, and Perforce',
-	'Batch, Bash, Ruby, and Perl',
+	'Batch, Bash, Ruby, Python, and Perl',
 	'HTML, CSS, JavaScript, PHP, and MySQL',
 	'C, C++, and Java using Object Oriented Programming'
 );
@@ -29,9 +34,17 @@ $resumeData['skills']['skills'] = array(
 
 
 # experience
-$resumeData['experience']['*display'] = 'Work Experience';
-$resumeData['experience']['Interim Engineering Intern'] = array(
-	'Qualcomm, Inc.',
+$resume_data['experience']['*display'] = 'Work Experience';
+$resume_data['experience']['Software Development Engineer Intern'] = array(
+	'Microsoft',
+	'Redmond, WA',
+	'May 2012 - August 2012',
+	array(
+		'Top Secret work for the Windows Phone Team'
+	)
+);
+$resume_data['experience']['Interim Engineering Intern'] = array(
+	'Qualcomm',
 	'San Diego, CA',
 	'May 2011 - August 2011',
 	array(
@@ -41,34 +54,36 @@ $resumeData['experience']['Interim Engineering Intern'] = array(
 		'Wrote Ruby scripts to analyze header files and automatically refactor and decouple header files, significantly decreasing compile times.'
 	)
 );
-$resumeData['experience']['Senior Computer Consultant'] = array(
+$resume_data['experience']['Senior Software Developer'] = array(
 	'Purdue ResNet',
 	'West Lafayette, IN',
 	'Fall 2010 - Present',
 	array(
-		'Supervised ResNet Employees',
-		'Active role in the interviewing, hiring, and training of new employees'
-	)
-);
-$resumeData['experience']['Software Developer'] = array(
-	'Purdue ResNet',
-	'West Lafayette, IN',
-	'Spring 2010 - Present',
-	array(
-		'Led a team of eight student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP Framework FuelPHP.',
+		'Led a team of eight student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP framework FuelPHP.',
 		'Developed PHP and Perl scripts to help monitor usage across the network.',
 		'Administered multiple Linux web and database servers used for development and production environments.'
 	)
 );
-$resumeData['experience']['Computer Consultant'] = array(
+$resume_data['experience']['Senior Computer Consultant'] = array(
+	'Purdue ResNet',
+	'West Lafayette, IN',
+	'Fall 2010 - Spring 2012',
+	array(
+		'Supervised ResNet Employees.',
+		'Active role in the interviewing, hiring, and training of new employees.'
+	)
+);
+/*
+$resume_data['experience']['Computer Consultant'] = array(
 	'Purdue ResNet',
 	'West Lafayette, IN',
 	'Fall 2009 - Spring 2010',
 	array(
-		'Provided telephone and onsite support for over 10,000 ResNet internet users'
+		'Provided telephone and onsite support for over 10,000 ResNet internet users.'
 	)
 );
-$resumeData['experience']['Web Designer'] = array(
+//*/
+$resume_data['experience']['Web Designer'] = array(
 	'The Perfect Pastry',
 	'Allison Park, PA',
 	'2009',
@@ -79,53 +94,53 @@ $resumeData['experience']['Web Designer'] = array(
 
 
 # education
-$resumeData['education']['*display'] = 'Education';
-$resumeData['education']['Computer Science, concentration in Software Engineering and Programming Languages'] = array(
+$resume_data['education']['*display'] = 'Education';
+$resume_data['education']['Computer Science, concentration in Software Engineering and Programming Languages'] = array(
 	'B.S.',
 	'Purdue University',
 	'West Lafayette, IN',
 	'May 2013 (expected)'
 );
-$resumeData['education']['Mathematics'] = array(
+$resume_data['education']['Mathematics'] = array(
 	'Minor'
 );
-$resumeData['education']['Religious Studies'] = array(
+$resume_data['education']['Religious Studies'] = array(
 	'Minor'
 );
 
 
 # related courses
-$resumeData['related courses']['*display'] = 'Related Courses';
-$resumeData['related courses'] = array(
-	'Operating Systems',
-	'Software Engineering',
-	'Web Information Retrieval and Management',
-	'Systems Programming : A',
-	'Computer Architecture : B',
-	'Data Structures and Algorithms : A-',
-	'Foundations of Computer Science (Discrete Mathematics) : B',
-	'Concurrent Programming in Java : A'
+$resume_data['related courses']['*display'] = 'Related Courses';
+$resume_data['related courses'] = array(
+	'Operating Systems: B',
+	'Software Engineering: A',
+	'Web Information Retrieval and Management: A+',
+	'Systems Programming: A',
+	'Computer Architecture: B',
+	'Data Structures and Algorithms: A-',
+	'Foundations of Computer Science (Discrete Mathematics): B',
+	'Concurrent Programming in Java: A'
 );
 
 
 # activities
 $resume['activities']['*display'] = 'Activities';
-$resumeData['activities'][] = array(
+$resume_data['activities'][] = array(
 	'Tomahawk Leadership Society',
 	'Webmaster',
 	'Spring 2011 - Present'
 );
-$resumeData['activities'][] = array(
+$resume_data['activities'][] = array(
 	'Purdue Lutheran Ministry',
 	'VP of Worship and Service',
 	'Spring 2010 - Present'
 );
-$resumeData['activities'][] = array(
+$resume_data['activities'][] = array(
 	'Latin and Ballroom Dance Club',
 	'',
 	'Fall 2010 - Spring 2011'
 );
-$resumeData['activities'][] = array(
+$resume_data['activities'][] = array(
 	'Fencing Club',
 	'',
 	'Fall 2009'
