@@ -15,7 +15,7 @@ $objective = 'To obtain a full-time position within the field of software engine
 $important = 'full-time';
 
 $shown_gpa_type = 'Cumulative';
-$shown_gpa = '3.71';
+$shown_gpa = '3.74';
 $maximum_gpa = '4.00';
 
 
@@ -40,7 +40,7 @@ $resume_data['experience']['Software Development Engineer Intern'] = array(
 	'Redmond, WA',
 	'May 2012 - August 2012',
 	array(
-		'Top Secret work for the Windows Phone Team'
+		'Work on the Windows Phone Wallet team'
 	)
 );
 $resume_data['experience']['Interim Engineering Intern'] = array(
