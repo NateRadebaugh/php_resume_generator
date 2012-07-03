@@ -1,12 +1,8 @@
 <?php
 $name = 'Nathan T Radebaugh';
-$address = 'Currently interning at Microsoft<br>
-4306 156th Ave. NE DD116<br>
+$address = '4306 156th Ave. NE DD116<br>
 Redmond, WA 98052
 ';
-/*$address = 'Hillenbrand Hall, Mailbox #696<br>
-1301 Third Street Dr.<br>
-West Lafayette, IN 47906';*/
 $phone = '530-628-3723 (mobile)';
 $email = 'nate.radebaugh@gmail.com';
 $website = "www.naterad.com";
@@ -38,9 +34,9 @@ $resume_data['experience']['*display'] = 'Work Experience';
 $resume_data['experience']['Software Development Engineer Intern'] = array(
 	'Microsoft',
 	'Redmond, WA',
-	'May 2012 - August 2012',
+	'May 2012 - Present',
 	array(
-		'Work on the Windows Phone Wallet team'
+		'Work on Windows Phone on the Wallet team'
 	)
 );
 $resume_data['experience']['Interim Engineering Intern'] = array(
@@ -59,7 +55,7 @@ $resume_data['experience']['Senior Software Developer'] = array(
 	'West Lafayette, IN',
 	'Fall 2010 - Present',
 	array(
-		'Led a team of eight student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP framework FuelPHP.',
+		'Led a team of student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP framework FuelPHP.',
 		'Developed PHP and Perl scripts to help monitor usage across the network.',
 		'Administered multiple Linux web and database servers used for development and production environments.'
 	)
@@ -118,7 +114,7 @@ $resume_data['related courses'] = array(
 	'Systems Programming: A',
 	'Computer Architecture: B',
 	'Data Structures and Algorithms: A-',
-	'Foundations of Computer Science (Discrete Mathematics): B',
+	'Discrete Mathematics: B',
 	'Concurrent Programming in Java: A'
 );
 
