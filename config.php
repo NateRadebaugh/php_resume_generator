@@ -1,13 +1,12 @@
 <?php
 $name = 'Nathan T Radebaugh';
-$address = '4306 156th Ave. NE DD116<br>
-Redmond, WA 98052
-';
+$address = null;
 $phone = '530-628-3723 (mobile)';
 $email = 'nate.radebaugh@gmail.com';
 $website = "www.naterad.com";
 
-$objective = 'To obtain a full-time position within the field of software engineering.';
+$objective = null;
+//$objective = 'To obtain a full-time position within the field of software engineering.';
 $important = 'full-time';
 
 $shown_gpa_type = 'Cumulative';
@@ -15,18 +14,15 @@ $shown_gpa = '3.74';
 $maximum_gpa = '4.00';
 
 
-
 # skills
 $resume_data['skills']['*display'] = 'Software Skills';
 $resume_data['skills']['skills'] = array(
 	'Windows, Mac, Unix, and Android',
-	'SVN, Git, and Perforce',
+	'SVN, Git, Perforce, and Source Depo',
 	'Batch, Bash, Ruby, Python, and Perl',
 	'HTML, CSS, JavaScript, PHP, and MySQL',
 	'C, C++, and Java using Object Oriented Programming'
 );
-
-
 
 
 # experience

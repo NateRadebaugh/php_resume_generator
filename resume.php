@@ -80,25 +80,43 @@ include("config.php");
 <div>
 	<div id="name"><?php echo $name; ?></div>
 	<div id="contact">
-	<?php echo $address; ?><br>
-	<?php echo $phone; ?><br>
-	<?php echo $email; ?><br>
-	<?php echo $website; ?>
-	</div>
-</div>
-	<br />
-	
-	<div class="label">Objective:</div>
-	<div class="content">
 	<?php
-	if (isset($important) === true):
-		echo str_replace($important, '<strong>'.$important.'</strong>', $objective);
-	else:
-		echo $objective;
+	if (empty($address) === false):
+		echo $address.'<br>'."\n\t";
+	endif;
+
+	if (empty($phone) === false):
+		echo $phone.'<br>'."\n\t";
+	endif;
+
+	if (empty($email) === false):
+		echo $email.'<br>'."\n\t";
+	endif;
+
+	if (empty($website) === false):
+		echo $website;
 	endif;
 	?>
 	</div>
-	<?php if (empty($resume_data['skills']) === false): ?>
+</div>
+	<?php
+	if (empty($objective) === false):
+		?>
+		<br />
+		<div class="label">Objective:</div>
+		<div class="content">
+		<?php
+		if (isset($important) === true):
+			echo str_replace($important, '<strong>'.$important.'</strong>', $objective);
+		else:
+			echo $objective;
+		endif;
+		?>
+		</div>
+		<?php
+	endif;
+
+	if (empty($resume_data['skills']) === false): ?>
 		<div class="label"><?php
 		if (empty($resume_data['skills']['*display']) === false):
 			echo $resume_data['skills']['*display'];
