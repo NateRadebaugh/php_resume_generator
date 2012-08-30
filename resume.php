@@ -3,7 +3,7 @@ ob_start();
 include("config.php");
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <title>Resume for <?php echo $name; ?></title>
 <style type="text/css">
@@ -227,7 +227,6 @@ include("config.php");
 			<?php endforeach; ?>
 		</ul>
 		<?php endif; ?>
-		</tr>
 	<?php endforeach; ?>
 	</div>
 <?php endif; ?>

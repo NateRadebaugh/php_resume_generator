@@ -30,7 +30,7 @@ $resume_data['experience']['*display'] = 'Work Experience';
 $resume_data['experience']['Software Development Engineer Intern'] = array(
 	'Microsoft',
 	'Redmond, WA',
-	'May 2012 - Present',
+	'May 2012 - July 2012',
 	array(
 		'Work on Windows Phone on the Wallet team'
 	)
@@ -93,9 +93,6 @@ $resume_data['education']['Computer Science, concentration in Software Engineeri
 	'West Lafayette, IN',
 	'May 2013 (expected)'
 );
-$resume_data['education']['Mathematics'] = array(
-	'Minor'
-);
 $resume_data['education']['Religious Studies'] = array(
 	'Minor'
 );
@@ -104,6 +101,9 @@ $resume_data['education']['Religious Studies'] = array(
 # related courses
 $resume_data['related courses']['*display'] = 'Related Courses';
 $resume_data['related courses'] = array(
+	'Compilers: In progress',
+	'Software Testing: In progress',
+	'Computer Networks: In progress',
 	'Operating Systems: B',
 	'Software Engineering: A',
 	'Web Information Retrieval and Management: A+',
