@@ -111,7 +111,8 @@ $resume_data['related courses'] = array(
 	'Computer Architecture: B',
 	'Data Structures and Algorithms: A-',
 	'Discrete Mathematics: B',
-	'Concurrent Programming in Java: A'
+	'Concurrent Programming in Java: A',
+	''
 );
 
 

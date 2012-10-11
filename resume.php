@@ -145,6 +145,7 @@ include("config.php");
 		unset($resume_data['education']['*display']);
 		?>:</div>
 		<div class="content">
+			<table><tbody>
 		<?php
 		foreach ($resume_data['education'] as $category => $information):
 			$degree_type = 0;
@@ -152,7 +153,6 @@ include("config.php");
 			$school_location = 2;
 			$grad_date = 3;
 		?>
-			<table><tbody>
 				<?php if (empty($information[$school_name]) === false && empty($information[$school_location]) === false && empty($information[$grad_date]) === false): ?>
 				<tr>
 					<td style="width: 90%"><strong><?php echo $information[$school_name];?></strong>, <?php echo $information[$school_location]; ?></td>
@@ -162,10 +162,10 @@ include("config.php");
 				<tr>
 					<td colspan="2" style="text-align: left; padding-left: 1.5em"><?php echo $information[$degree_type];?>, <i><?php echo $category; ?></i></td>
 				</tr>
-			</tbody></table>
 		<?php
 		endforeach;
 		?>
+			</tbody></table>
 		</div>
 		<?php
 	endif;
