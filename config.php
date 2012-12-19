@@ -17,16 +17,25 @@ $maximum_gpa = '4.00';
 # skills
 $resume_data['skills']['*display'] = 'Software Skills';
 $resume_data['skills']['skills'] = array(
-	'Windows, Mac, Unix, and Android',
+	'Windows, Mac, Unix, Android, Windows Phone',
 	'SVN, Git, Perforce, and Source Depo',
 	'Batch, Bash, Ruby, Python, and Perl',
 	'HTML, CSS, JavaScript, PHP, and MySQL',
-	'C, C++, and Java using Object Oriented Programming'
+	'C, C++, C#, and Java using Object Oriented Programming'
 );
 
 
 # experience
 $resume_data['experience']['*display'] = 'Work Experience';
+$resume_data['experience']['Software Development Engineer'] = array(
+	'Microsoft',
+	'Redmond, WA',
+	'Starting August 2013',
+	array(
+		'Work on the Windows Phone team'
+	)
+);
+
 $resume_data['experience']['Software Development Engineer Intern'] = array(
 	'Microsoft',
 	'Redmond, WA',
@@ -49,13 +58,14 @@ $resume_data['experience']['Interim Engineering Intern'] = array(
 $resume_data['experience']['Senior Software Developer'] = array(
 	'Purdue ResNet',
 	'West Lafayette, IN',
-	'Fall 2010 - Present',
+	'Fall 2010 - Spring 2013',
 	array(
 		'Led a team of student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP framework FuelPHP.',
 		'Developed PHP and Perl scripts to help monitor usage across the network.',
 		'Administered multiple Linux web and database servers used for development and production environments.'
 	)
 );
+/*
 $resume_data['experience']['Senior Computer Consultant'] = array(
 	'Purdue ResNet',
 	'West Lafayette, IN',
@@ -65,7 +75,6 @@ $resume_data['experience']['Senior Computer Consultant'] = array(
 		'Active role in the interviewing, hiring, and training of new employees.'
 	)
 );
-/*
 $resume_data['experience']['Computer Consultant'] = array(
 	'Purdue ResNet',
 	'West Lafayette, IN',
@@ -101,9 +110,9 @@ $resume_data['education']['Religious Studies'] = array(
 # related courses
 $resume_data['related courses']['*display'] = 'Related Courses';
 $resume_data['related courses'] = array(
-	'Compilers: In progress',
-	'Software Testing: In progress',
-	'Computer Networks: In progress',
+	'Compilers: A+',
+	'Software Testing: A',
+	'Computer Networks: A',
 	'Operating Systems: B',
 	'Software Engineering: A',
 	'Web Information Retrieval and Management: A+',
@@ -121,12 +130,12 @@ $resume['activities']['*display'] = 'Activities';
 $resume_data['activities'][] = array(
 	'Tomahawk Leadership Society',
 	'Webmaster',
-	'Spring 2011 - Present'
+	'Spring 2011 - Fall 2011'
 );
 $resume_data['activities'][] = array(
 	'Purdue Lutheran Ministry',
 	'VP of Worship and Service',
-	'Spring 2010 - Present'
+	'Spring 2010 - Spring 2011'
 );
 $resume_data['activities'][] = array(
 	'Latin and Ballroom Dance Club',
