@@ -60,7 +60,7 @@ $resume_data['experience']['Senior Software Developer'] = array(
 	'West Lafayette, IN',
 	'Fall 2010 - Spring 2013',
 	array(
-		'Led a team of student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP framework FuelPHP.',
+		'Led a team of student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP framework FuelPHP and open source Bootstrap.',
 		'Developed PHP and Perl scripts to help monitor usage across the network.',
 		'Administered multiple Linux web and database servers used for development and production environments.'
 	)
@@ -127,6 +127,11 @@ $resume_data['related courses'] = array(
 
 # activities
 $resume['activities']['*display'] = 'Activities';
+$resume_data['activities'][] = array(
+	'Study abroad',
+	'Berlin, Germany',
+	'Fall 2011'
+);
 $resume_data['activities'][] = array(
 	'Tomahawk Leadership Society',
 	'Webmaster',
