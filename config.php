@@ -2,7 +2,7 @@
 $name = 'Nathan T Radebaugh';
 $address = null;
 $phone = '530-628-3723 (mobile)';
-$email = 'nate.radebaugh@gmail.com';
+$email = 'nate.radebaugh@outlook.com';
 $website = "www.naterad.com";
 
 $objective = null;
