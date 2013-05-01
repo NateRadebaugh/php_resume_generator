@@ -35,7 +35,6 @@ $resume_data['experience']['Software Development Engineer'] = array(
 		'Work on the Windows Phone team'
 	)
 );
-
 $resume_data['experience']['Software Development Engineer Intern'] = array(
 	'Microsoft',
 	'Redmond, WA',
@@ -110,6 +109,7 @@ $resume_data['education']['Religious Studies'] = array(
 # related courses
 $resume_data['related courses']['*display'] = 'Related Courses';
 $resume_data['related courses'] = array(
+	'Programming Languages: B',
 	'Compilers: A+',
 	'Software Testing: A',
 	'Computer Networks: A',
@@ -121,7 +121,6 @@ $resume_data['related courses'] = array(
 	'Data Structures and Algorithms: A-',
 	'Discrete Mathematics: B',
 	'Concurrent Programming in Java: A',
-	''
 );
 
 
