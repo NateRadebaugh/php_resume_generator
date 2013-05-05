@@ -109,18 +109,26 @@ $resume_data['education']['Religious Studies'] = array(
 # related courses
 $resume_data['related courses']['*display'] = 'Related Courses';
 $resume_data['related courses'] = array(
+	'Algorithms: B',
 	'Programming Languages: B',
+	
 	'Compilers: A+',
 	'Software Testing: A',
+	
 	'Computer Networks: A',
 	'Operating Systems: B',
+	
 	'Software Engineering: A',
 	'Web Information Retrieval and Management: A+',
+	
 	'Systems Programming: A',
 	'Computer Architecture: B',
+	
 	'Data Structures and Algorithms: A-',
 	'Discrete Mathematics: B',
+	
 	'Concurrent Programming in Java: A',
+	'',
 );
 
 
