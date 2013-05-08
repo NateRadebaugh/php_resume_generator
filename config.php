@@ -10,7 +10,7 @@ $objective = null;
 $important = 'full-time';
 
 $shown_gpa_type = 'Cumulative';
-$shown_gpa = '3.74';
+$shown_gpa = '3.71';
 $maximum_gpa = '4.00';
 
 
@@ -99,7 +99,7 @@ $resume_data['education']['Computer Science, concentration in Software Engineeri
 	'B.S.',
 	'Purdue University',
 	'West Lafayette, IN',
-	'May 2013 (expected)'
+	'May 2013'
 );
 $resume_data['education']['Religious Studies'] = array(
 	'Minor'
@@ -109,7 +109,7 @@ $resume_data['education']['Religious Studies'] = array(
 # related courses
 $resume_data['related courses']['*display'] = 'Related Courses';
 $resume_data['related courses'] = array(
-	'Algorithms: B',
+	'Algorithms: B-',
 	'Programming Languages: B',
 	
 	'Compilers: A+',
