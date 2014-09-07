@@ -40,7 +40,7 @@ $resume_data['experience']['Software Development Engineer Intern'] = array(
 	'Redmond, WA',
 	'May 2012 - July 2012',
 	array(
-		'Work on Windows Phone on the Wallet team'
+		'Work on Windows Phone on the Wallet team.'
 	)
 );
 $resume_data['experience']['Interim Engineering Intern'] = array(
