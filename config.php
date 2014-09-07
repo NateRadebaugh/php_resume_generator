@@ -32,7 +32,7 @@ $resume_data['experience']['Software Development Engineer'] = array(
 	'Redmond, WA',
 	'August 2013 - Present',
 	array(
-		'Work on Windows Phone Wallet, Cortana, and further work on the next great thing from Windows'
+		'Work on Windows Phone Wallet, Cortana, and further work on the next great thing from Windows.'
 	)
 );
 $resume_data['experience']['Software Development Engineer Intern'] = array(
