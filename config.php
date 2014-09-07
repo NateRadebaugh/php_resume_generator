@@ -21,7 +21,7 @@ $resume_data['skills']['skills'] = array(
 	'SVN, Git, Perforce, and Source Depo',
 	'Batch, Bash, Ruby, Python, and Perl',
 	'HTML, CSS, JavaScript, PHP, and MySQL',
-	'C, C++, C#, and Java using Object Oriented Programming'
+	'C, C++/CX, C#, and Java using Object Oriented Programming'
 );
 
 
@@ -30,9 +30,9 @@ $resume_data['experience']['*display'] = 'Work Experience';
 $resume_data['experience']['Software Development Engineer'] = array(
 	'Microsoft',
 	'Redmond, WA',
-	'Starting August 2013',
+	'August 2013 - Present',
 	array(
-		'Work on the Windows Phone team'
+		'Work on Windows Phone Wallet, Cortana, and further work on the next great thing from Windows'
 	)
 );
 $resume_data['experience']['Software Development Engineer Intern'] = array(
@@ -64,16 +64,18 @@ $resume_data['experience']['Senior Software Developer'] = array(
 		'Administered multiple Linux web and database servers used for development and production environments.'
 	)
 );
-/*
+
 $resume_data['experience']['Senior Computer Consultant'] = array(
 	'Purdue ResNet',
 	'West Lafayette, IN',
 	'Fall 2010 - Spring 2012',
 	array(
-		'Supervised ResNet Employees.',
-		'Active role in the interviewing, hiring, and training of new employees.'
+		'Supervised Campus Internet (ResNet) Employees.',
+		'Active role in the interviewing, hiring, and training of new employees.',
+		'Provided telephone and onsite support for over 10,000 ResNet internet users.'
 	)
 );
+/*
 $resume_data['experience']['Computer Consultant'] = array(
 	'Purdue ResNet',
 	'West Lafayette, IN',
@@ -82,7 +84,7 @@ $resume_data['experience']['Computer Consultant'] = array(
 		'Provided telephone and onsite support for over 10,000 ResNet internet users.'
 	)
 );
-//*/
+
 $resume_data['experience']['Web Designer'] = array(
 	'The Perfect Pastry',
 	'Allison Park, PA',
@@ -91,6 +93,7 @@ $resume_data['experience']['Web Designer'] = array(
 		'Worked with a client to create a website for a local bakery using HTML, CSS, JavaScript, and PHP.'
 	)
 );
+//*/
 
 
 # education
