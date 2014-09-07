@@ -13,6 +13,24 @@ $shown_gpa_type = 'Cumulative';
 $shown_gpa = '3.71';
 $maximum_gpa = '4.00';
 
+# education
+define('DEGREE_TYPE', 0);
+define('SCHOOL_NAME', 1);
+define('SCHOOL_LOCATION', 2);
+define('GRADUATION_DATE', 3);
+
+# experience
+define('COMPANY_NAME', 0);
+define('COMPANY_LOCATION', 1);
+define('EMPLOYMENT_DATES', 2);
+define('EMPLOYMENT_DETAILS_ARRAY', 3);
+
+# activities
+define('CLUB_NAME', 0);
+define('CLUB_POSITION', 1);
+define('PARTICIPATION_DATES', 2);
+define('CLUB_DESCRIPTION_ARRAY', 3);
+
 
 # skills
 $resume_data['skills']['*display'] = 'Software Skills';
