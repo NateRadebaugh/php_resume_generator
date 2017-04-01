@@ -35,64 +35,77 @@ define('CLUB_DESCRIPTION_ARRAY', 3);
 # skills
 $resume_data['skills']['*display'] = 'Software Skills';
 $resume_data['skills']['skills'] = array(
-	'Windows, Mac, Unix, Android, Windows Phone',
-	'SVN, Git, Perforce, and Source Depo',
-	'Batch, Bash, Ruby, Python, and Perl',
-	'HTML, CSS, JavaScript, PHP, and MySQL',
-	'C, C++/CX, C#, and Java using Object Oriented Programming'
+    'Windows, Mac, Unix, Android, Windows Phone',
+    'Git, SVN, Perforce, and Source Depo',
+    'Batch, Bash, Ruby, Python, and Perl',
+    'HTML, CSS, JavaScript, PHP, and MySQL',
+    'C, C++/CX, C#, and Java using Object Oriented Programming'
 );
 
 
 # experience
 $resume_data['experience']['*display'] = 'Work Experience';
+$resume_data['experience']['Software Development Engineer II'] = array(
+    'Microsoft',
+    'Redmond, WA',
+    'December 2015 - Present',
+    array(
+        'Shipped "Continuum for Phone" experience on Windows 10 for phone.',
+        'Currently working on the next version of Windows 10 and Windows shells.'
+    )
+);
+
 $resume_data['experience']['Software Development Engineer'] = array(
-	'Microsoft',
-	'Redmond, WA',
-	'August 2013 - Present',
-	array(
-		'Work on Windows Phone Wallet, Cortana, and further work on the next great thing from Windows.'
-	)
+    'Microsoft',
+    'Redmond, WA',
+    'August 2013 - December 2015',
+    array(
+        'Work on Windows Phone Wallet, shipping in Windows Phone 8 and 8.1.',
+        'Initial phone version of Cortana. Implemented home page of Cortana app including personalized welcome text and help tips.',
+        'Initial version of Continuum for Phone, promising a "Desktop-like" experience when connecting a phone to a display/keyboard/mouse.'
+    )
 );
 $resume_data['experience']['Software Development Engineer Intern'] = array(
-	'Microsoft',
-	'Redmond, WA',
-	'May 2012 - July 2012',
-	array(
-		'Work on Windows Phone on the Wallet team.'
-	)
+    'Microsoft',
+    'Redmond, WA',
+    'May 2012 - July 2012',
+    array(
+        'Work on Windows Phone on the Wallet team. Worked on porting barcode generation code from Office team to the wallet app.'
+    )
 );
 $resume_data['experience']['Interim Engineering Intern'] = array(
-	'Qualcomm',
-	'San Diego, CA',
-	'May 2011 - August 2011',
-	array(
-		'Wrote tools using Batch, Perl, Visual C++ and the MFC framework to automate the running of tests on an external server, generate regression reports, and send out emails, resulting in an over 705% increase in test productivity.',
-		'Wrote PHP and C++ scripts to streamline the creation and maintenance of Call Flow Analysis log parser tools.',
-		'Performed low level structure analysis and alignment, resulting in smaller data packets and faster data transfer speeds.',
-		'Wrote Ruby scripts to analyze header files and automatically refactor and decouple header files, significantly decreasing compile times.'
-	)
+    'Qualcomm',
+    'San Diego, CA',
+    'May 2011 - August 2011',
+    array(
+        'Wrote tools using Batch, Perl, Visual C++, and the MFC framework to automate running tests, generating regression reports, and sending email reports.',
+        'Wrote PHP and C++ scripts to streamline the creation and maintenance of Call Flow Analysis log parser tools.',
+        'Performed low level struct analysis and alignment, resulting in smaller data packets and faster data transfer speeds.',
+        'Wrote Ruby scripts to analyze header files and automatically refactor and decouple header files, significantly decreasing compile times.'
+    )
 );
 $resume_data['experience']['Senior Software Developer'] = array(
-	'Purdue ResNet',
-	'West Lafayette, IN',
-	'Fall 2010 - Spring 2013',
-	array(
-		'Led a team of student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP framework FuelPHP and open source Bootstrap.',
-		'Developed PHP and Perl scripts to help monitor usage across the network.',
-		'Administered multiple Linux web and database servers used for development and production environments.'
-	)
+    'Purdue ResNet',
+    'West Lafayette, IN',
+    'Fall 2010 - Spring 2013',
+    array(
+        'Led a team of student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP framework FuelPHP and open source Bootstrap.',
+        'Developed PHP and Perl scripts to help monitor usage across the network.',
+        'Administered multiple Linux web and database servers used for development and production environments.'
+    )
 );
 
 $resume_data['experience']['Senior Computer Consultant'] = array(
-	'Purdue ResNet',
-	'West Lafayette, IN',
-	'Fall 2010 - Spring 2012',
-	array(
-		'Supervised Campus Internet (ResNet) Employees.',
-		'Active role in the interviewing, hiring, and training of new employees.',
-		'Provided telephone and onsite support for over 10,000 ResNet internet users.'
-	)
+    'Purdue ResNet',
+    'West Lafayette, IN',
+    'Fall 2010 - Spring 2012',
+    array(
+        'Supervised Campus Internet (ResNet) Employees.',
+        'Active role in the interviewing, hiring, and training of new employees.',
+        'Provided telephone and onsite support for over 10,000 ResNet internet users.'
+    )
 );
+
 /*
 $resume_data['experience']['Computer Consultant'] = array(
 	'Purdue ResNet',
@@ -117,66 +130,66 @@ $resume_data['experience']['Web Designer'] = array(
 # education
 $resume_data['education']['*display'] = 'Education';
 $resume_data['education']['Computer Science, concentration in Software Engineering and Programming Languages'] = array(
-	'B.S.',
-	'Purdue University',
-	'West Lafayette, IN',
-	'May 2013'
+    'B.S.',
+    'Purdue University',
+    'West Lafayette, IN',
+    'May 2013'
 );
 $resume_data['education']['Religious Studies'] = array(
-	'Minor'
+    'Minor'
 );
 
 
 # related courses
 $resume_data['related courses']['*display'] = 'Related Courses';
 $resume_data['related courses'] = array(
-	'Algorithms: B-',
-	'Programming Languages: B',
-	
-	'Compilers: A+',
-	'Software Testing: A',
-	
-	'Computer Networks: A',
-	'Operating Systems: B',
-	
-	'Software Engineering: A',
-	'Web Information Retrieval and Management: A+',
-	
-	'Systems Programming: A',
-	'Computer Architecture: B',
-	
-	'Data Structures and Algorithms: A-',
-	'Discrete Mathematics: B',
-	
-	'Concurrent Programming in Java: A',
-	'',
+    'Algorithms: B-',
+    'Programming Languages: B',
+
+    'Compilers: A+',
+    'Software Testing: A',
+
+    'Computer Networks: A',
+    'Operating Systems: B',
+
+    'Software Engineering: A',
+    'Web Information Retrieval and Management: A+',
+
+    'Systems Programming: A',
+    'Computer Architecture: B',
+
+    'Data Structures and Algorithms: A-',
+    'Discrete Mathematics: B',
+
+    'Concurrent Programming in Java: A',
+    '',
 );
 
 
 # activities
-$resume['activities']['*display'] = 'Activities';
+$resume['activities']['*display'] = 'College Activities';
 $resume_data['activities'][] = array(
-	'Study abroad',
-	'Berlin, Germany',
-	'Fall 2011'
+    'Study abroad',
+    'Berlin, Germany',
+    'Fall 2011'
 );
 $resume_data['activities'][] = array(
-	'Tomahawk Leadership Society',
-	'Webmaster',
-	'Spring 2011 - Fall 2011'
+    'Tomahawk Leadership Society',
+    'Webmaster',
+    'Spring 2011 - Fall 2011'
 );
 $resume_data['activities'][] = array(
-	'Purdue Lutheran Ministry',
-	'VP of Worship and Service',
-	'Spring 2010 - Spring 2011'
+    'Purdue Lutheran Ministry',
+    'VP of Worship and Service',
+    'Spring 2010 - Spring 2011'
 );
 $resume_data['activities'][] = array(
-	'Latin and Ballroom Dance Club',
-	'',
-	'Fall 2010 - Spring 2011'
+    'Latin and Ballroom Dance Club',
+    '',
+    'Fall 2010 - Spring 2011'
 );
 $resume_data['activities'][] = array(
-	'Fencing Club',
-	'',
-	'Fall 2009'
+    'Fencing Club',
+    '',
+    'Fall 2009'
 );
