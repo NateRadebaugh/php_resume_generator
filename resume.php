@@ -279,6 +279,34 @@ if ($i % 2) {
 <?php } ?>
             </div>
 <?php } ?>
+
+<?php if (count($resume_data['side projects']) > 0) { ?>
+            <div class="label"><?php
+        if (!empty($resume_data['side projects']['*display'])) {
+            echo $resume_data['side projects']['*display'];
+        } else {
+            echo 'Side Projects';
+        }
+
+        unset($resume_data['side projects']['*display']);
+?>:</div>
+            <div class="content">
+<?php foreach ($resume_data['side projects'] as $project_name => $information) { ?>
+                <div class="employment-header">
+                    <strong><?php echo $project_name; ?></strong>
+
+                    <span class="float-right"><?php echo $information[PROJECT_DATES]; ?></span><br/>
+                </div>
+<?php if (count($information[PROJECT_DESCRIPTION_ARRAY]) > 0) { ?>
+                <ul class="employment-details">
+<?php foreach ($information[PROJECT_DESCRIPTION_ARRAY] as $detail) { ?>
+                    <li><?php echo $detail; ?></li>
+<?php } ?>
+                </ul>
+<?php } ?>
+<?php } ?>
+            </div>
+<?php } ?>
         </div>
     </body>
 </html>

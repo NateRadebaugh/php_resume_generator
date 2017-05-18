@@ -31,15 +31,20 @@ define('CLUB_POSITION', 1);
 define('PARTICIPATION_DATES', 2);
 define('CLUB_DESCRIPTION_ARRAY', 3);
 
+# side projects
+define('PROJECT_DATES', 0);
+define('PROJECT_DESCRIPTION_ARRAY', 1);
+
 
 # skills
 $resume_data['skills']['*display'] = 'Software Skills';
 $resume_data['skills']['skills'] = array(
-    'Windows, Mac, Unix, Android, Windows Phone',
+    'Windows, Mac, Linux, Android, Windows Phone',
     'Git, SVN, Perforce, and Source Depo',
-    'Batch, Bash, Ruby, Python, and Perl',
+    'PowerShell, Bash, Ruby, Python, and Perl',
     'HTML, CSS, JavaScript, PHP, and MySQL',
-    'C, C++/CX, C#, and Java using Object Oriented Programming'
+    'C, C++, C++/CX, C#, and Java using Object Oriented Programming',
+    'MVC and MVVM patterns'
 );
 
 
@@ -48,10 +53,11 @@ $resume_data['experience']['*display'] = 'Work Experience';
 $resume_data['experience']['Software Development Engineer II'] = array(
     'Microsoft',
     'Redmond, WA',
-    'December 2015 - Present',
+    'December 2015 - May 2017',
     array(
-        'Shipped "Continuum for Phone" experience on Windows 10 for phone.',
-        'Currently working on the next version of Windows 10 and Windows shells.'
+        'Worked with a team of about 20 developers to rearchitect how Windows UI is created for different products (Phone, Desktop, etc.)',
+        'Led architectural decisions for componentization of Windows for future shells, mentoring Jr. team members. Met with specific owners and led inventory, consolidation, and forward planning of individual components of Windows UI, including taskbar, navigation bar, action center, etc.',
+        'Became subject matter expert at XAML UI markup and efficient data binding through the MVVM pattern. Led team through decisions about performance and memory optimizations and improvements in back end and front end.'
     )
 );
 
@@ -60,9 +66,10 @@ $resume_data['experience']['Software Development Engineer'] = array(
     'Redmond, WA',
     'August 2013 - December 2015',
     array(
-        'Work on Windows Phone Wallet, shipping in Windows Phone 8 and 8.1.',
-        'Initial phone version of Cortana. Implemented home page of Cortana app including personalized welcome text and help tips.',
-        'Initial version of Continuum for Phone, promising a "Desktop-like" experience when connecting a phone to a display/keyboard/mouse.'
+        //'Worked on Microsoft Wallet app, shipping in Windows Phone 8 and 8.1.',
+        'Implemented home page of Cortana app including personalized welcome text and help tips UI.',
+        'Extended phone functionality and experiences for a large external display, providing a "Desktop-like" experience when connecting a phone to a TV/keyboard/mouse.',
+        'Owned the first-run experience, configuration, and virtual touchpad application for this new "Desktop-like" experience on Windows Phones.'
     )
 );
 $resume_data['experience']['Software Development Engineer Intern'] = array(
@@ -70,7 +77,7 @@ $resume_data['experience']['Software Development Engineer Intern'] = array(
     'Redmond, WA',
     'May 2012 - July 2012',
     array(
-        'Work on Windows Phone on the Wallet team. Worked on porting barcode generation code from Office team to the wallet app.'
+        'Worked the Microsoft Wallet team, within Windows Phone division. Ported barcode generation functionality from Microsoft Office apps to be available to apps on Windows Phone.'
     )
 );
 $resume_data['experience']['Interim Engineering Intern'] = array(
@@ -79,9 +86,9 @@ $resume_data['experience']['Interim Engineering Intern'] = array(
     'May 2011 - August 2011',
     array(
         'Wrote tools using Batch, Perl, Visual C++, and the MFC framework to automate running tests, generating regression reports, and sending email reports.',
-        'Wrote PHP and C++ scripts to streamline the creation and maintenance of Call Flow Analysis log parser tools.',
-        'Performed low level struct analysis and alignment, resulting in smaller data packets and faster data transfer speeds.',
-        'Wrote Ruby scripts to analyze header files and automatically refactor and decouple header files, significantly decreasing compile times.'
+        //'Wrote PHP and C++ scripts to streamline the creation and maintenance of Call Flow Analysis log parser tools.',
+        //'Performed low level struct analysis and alignment, resulting in smaller data packets and faster data transfer speeds.',
+        //'Wrote Ruby scripts to analyze header files and automatically refactor and decouple header files, significantly decreasing compile times.'
     )
 );
 $resume_data['experience']['Senior Software Developer'] = array(
@@ -89,24 +96,24 @@ $resume_data['experience']['Senior Software Developer'] = array(
     'West Lafayette, IN',
     'Fall 2010 - Spring 2013',
     array(
-        'Led a team of student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP framework FuelPHP and open source Bootstrap.',
-        'Developed PHP and Perl scripts to help monitor usage across the network.',
-        'Administered multiple Linux web and database servers used for development and production environments.'
+        'Led a team of 8 student developers in the development and maintenance of a PHP/MySQL driven management tool using the open source PHP MVC framework FuelPHP and open source Bootstrap, including Perl scripts to help monitor data usage across the network.',
+        'Administered multiple Linux web and database servers used for development, test, and production environments.',
+        'Active role in interviewing, hiring, and training of new employees.'
     )
 );
 
+/*
 $resume_data['experience']['Senior Computer Consultant'] = array(
     'Purdue ResNet',
     'West Lafayette, IN',
     'Fall 2010 - Spring 2012',
     array(
-        'Supervised Campus Internet (ResNet) Employees.',
+        'Supervised Purdue Campus Internet (ResNet) Employees in call center and development roles.',
         'Active role in the interviewing, hiring, and training of new employees.',
-        'Provided telephone and onsite support for over 10,000 ResNet internet users.'
+        'Provided telephone and onsite support for over 10,000 users.'
     )
 );
 
-/*
 $resume_data['experience']['Computer Consultant'] = array(
 	'Purdue ResNet',
 	'West Lafayette, IN',
@@ -143,53 +150,40 @@ $resume_data['education']['Religious Studies'] = array(
 # related courses
 $resume_data['related courses']['*display'] = 'Related Courses';
 $resume_data['related courses'] = array(
-    'Algorithms: B-',
+    'Data Structures and Algorithms: A-',
     'Programming Languages: B',
 
-    'Compilers: A+',
-    'Software Testing: A',
-
-    'Computer Networks: A',
-    'Operating Systems: B',
-
-    'Software Engineering: A',
-    'Web Information Retrieval and Management: A+',
-
-    'Systems Programming: A',
-    'Computer Architecture: B',
-
-    'Data Structures and Algorithms: A-',
-    'Discrete Mathematics: B',
-
     'Concurrent Programming in Java: A',
-    '',
+    'Compilers: A+',
+
+    'Software Testing: A',
+    'Software Engineering: A',
+
+    'Web Information Retrieval and Management: A+',
+    'Computer Networks: A',
 );
 
-
-# activities
-$resume['activities']['*display'] = 'College Activities';
-$resume_data['activities'][] = array(
-    'Study abroad',
-    'Berlin, Germany',
-    'Fall 2011'
+# side projects
+$resume_data['side projects']['*display'] = 'Side Projects';
+$resume_data['side projects']['Web App - FoodCents'] = array(
+    '2016 - Present',
+    array(
+        'Created web app for smarter meal planning using MySQL/CodeIgniter PHP MVC framework/JQuery/Bootstrap/Mustache templates.',
+        'Currently porting to use Angular and MongoDB front end.'
+    )
 );
-$resume_data['activities'][] = array(
-    'Tomahawk Leadership Society',
-    'Webmaster',
-    'Spring 2011 - Fall 2011'
+$resume_data['side projects']['Windows Phone Game - FarkleFun'] = array(
+    '2013',
+    array(
+    )
 );
-$resume_data['activities'][] = array(
-    'Purdue Lutheran Ministry',
-    'VP of Worship and Service',
-    'Spring 2010 - Spring 2011'
+$resume_data['side projects']['Android Game - FarkleFun Free!'] = array(
+    '2013',
+    array(
+    )
 );
-$resume_data['activities'][] = array(
-    'Latin and Ballroom Dance Club',
-    '',
-    'Fall 2010 - Spring 2011'
-);
-$resume_data['activities'][] = array(
-    'Fencing Club',
-    '',
-    'Fall 2009'
+$resume_data['side projects']['Android Widget - What\'s Today Calendar Widget'] = array(
+    '2010',
+    array(
+    )
 );
