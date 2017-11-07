@@ -280,7 +280,7 @@ if ($i % 2) {
             </div>
 <?php } ?>
 
-<?php if (count($resume_data['side projects']) > 0) { ?>
+<?php if (!empty($resume_data['side projects']) && count($resume_data['side projects']) > 0) { ?>
             <div class="label"><?php
         if (!empty($resume_data['side projects']['*display'])) {
             echo $resume_data['side projects']['*display'];

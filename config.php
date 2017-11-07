@@ -40,16 +40,25 @@ define('PROJECT_DESCRIPTION_ARRAY', 1);
 $resume_data['skills']['*display'] = 'Software Skills';
 $resume_data['skills']['skills'] = array(
     'Windows, Mac, Linux, Android, Windows Phone',
-    'Git, SVN, Perforce, and Source Depo',
+    'Git, and SVN',
     'PowerShell, Bash, Ruby, Python, and Perl',
-    'HTML, CSS, JavaScript, PHP, and MySQL',
-    'C, C++, C++/CX, C#, and Java using Object Oriented Programming',
+    'HTML, CSS, Angular, React, PHP, and My/MSSQL',
+    'C, C++, CX, C#, and Java using Object Oriented Programming',
     'MVC and MVVM patterns'
 );
 
 
 # experience
 $resume_data['experience']['*display'] = 'Work Experience';
+$resume_data['experience']['Staff Consultant'] = array(
+    'SWC Technology Partners',
+    'Oak Brook, IL',
+    'May 2017 - Present',
+    array(
+        'Working with clients on large projects of scale in a variety of technologies including C#, .NET MVC, and MSSQL.'
+    )
+);
+
 $resume_data['experience']['Software Development Engineer II'] = array(
     'Microsoft',
     'Redmond, WA',
@@ -60,7 +69,6 @@ $resume_data['experience']['Software Development Engineer II'] = array(
         'Became subject matter expert at XAML UI markup and efficient data binding through the MVVM pattern. Led team through decisions about performance and memory optimizations and improvements in back end and front end.'
     )
 );
-
 $resume_data['experience']['Software Development Engineer'] = array(
     'Microsoft',
     'Redmond, WA',
@@ -164,26 +172,26 @@ $resume_data['related courses'] = array(
 );
 
 # side projects
-$resume_data['side projects']['*display'] = 'Side Projects';
-$resume_data['side projects']['Web App - FoodCents'] = array(
-    '2016 - Present',
-    array(
-        'Created web app for smarter meal planning using MySQL/CodeIgniter PHP MVC framework/JQuery/Bootstrap/Mustache templates.',
-        'Currently porting to use Angular and MongoDB front end.'
-    )
-);
-$resume_data['side projects']['Windows Phone Game - FarkleFun'] = array(
-    '2013',
-    array(
-    )
-);
-$resume_data['side projects']['Android Game - FarkleFun Free!'] = array(
-    '2013',
-    array(
-    )
-);
-$resume_data['side projects']['Android Widget - What\'s Today Calendar Widget'] = array(
-    '2010',
-    array(
-    )
-);
+// $resume_data['side projects']['*display'] = 'Side Projects';
+// $resume_data['side projects']['Web App - FoodCents'] = array(
+//     '2016 - Present',
+//     array(
+//         'Created web app for smarter meal planning using MySQL/CodeIgniter PHP MVC framework/JQuery/Bootstrap/Mustache templates.',
+//         'Currently porting to use Angular and MongoDB front end.'
+//     )
+// );
+// $resume_data['side projects']['Windows Phone Game - FarkleFun'] = array(
+//     '2013',
+//     array(
+//     )
+// );
+// $resume_data['side projects']['Android Game - FarkleFun Free!'] = array(
+//     '2013',
+//     array(
+//     )
+// );
+// $resume_data['side projects']['Android Widget - What\'s Today Calendar Widget'] = array(
+//     '2010',
+//     array(
+//     )
+// );
