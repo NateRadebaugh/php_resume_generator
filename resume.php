@@ -205,51 +205,7 @@ foreach ($resume_data['education'] as $category => $information) {
 
 <?php
     }
-
-    if (count($resume_data) > 0) {
-    ?>
-            <div class="label"><?php
-    if (!empty($resume_data['related courses'])) {
-        if (!empty($resume_data['related courses']['*display'])) {
-            echo $resume_data['related courses']['*display'];
-        } else {
-            echo 'Related Courses';
-        }
-    }
-
-    unset($resume_data['related courses']['*display']);
-    ?>:</div>
-            <div class="content">
-                <table class="related-courses">
-                    <tbody>
-<?php
-                $numCourses = count($resume_data['related courses']);
-            for ($i = 0; $i < $numCourses; $i++) {
-                if (!($i % 2)) {
-                ?>
-                        <tr>
-<?php } ?>
-                            <td><?php echo $resume_data['related courses'][$i]; ?></td>
-<?php
-if ($i % 2) {
 ?>
-                        </tr>
-<?php
-}
-}
-                ?>
-                    </tbody>
-                </table>
-<?php
-    if (!empty($shown_gpa) &&
-        !empty($maximum_gpa)) {
-    ?>
-                <strong class="gpa"><?php echo $shown_gpa_type; ?> GPA: <?php echo $shown_gpa; ?> / <?php echo $maximum_gpa; ?></strong>
-<?php
-    }
-    ?>
-            </div>
-<?php } ?>
 
 <?php if (count($resume_data['experience']) > 0) { ?>
             <div class="label"><?php
