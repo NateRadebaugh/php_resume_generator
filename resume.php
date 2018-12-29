@@ -179,8 +179,9 @@ include("config.php");
                 <table>
                     <tbody>
 <?php
-foreach ($resume_data['education'] as $category => $information) {
-    if (!empty($information[SCHOOL_NAME]) &&
+foreach ($resume_data['education'] as $information) {
+    if (!empty($information[DEGREE_NAME]) &&
+    !empty($information[SCHOOL_NAME]) &&
     !empty($information[SCHOOL_LOCATION]) &&
     !empty($information[GRADUATION_DATE])) {
     ?>
@@ -193,7 +194,7 @@ foreach ($resume_data['education'] as $category => $information) {
     ?>
                         <tr>
                             <td colspan="2" class="degree-information">
-                                <?php echo $information[DEGREE_TYPE]; ?>, <i><?php echo $category; ?></i>
+                                <?php echo $information[DEGREE_TYPE]; ?>, <i><?php echo $information[DEGREE_NAME]; ?></i>
                             </td>
                         </tr>
 <?php
@@ -218,12 +219,12 @@ foreach ($resume_data['education'] as $category => $information) {
         unset($resume_data['experience']['*display']);
 ?>:</div>
             <div class="content">
-<?php foreach ($resume_data['experience'] as $category => $information) { ?>
+<?php foreach ($resume_data['experience'] as $information) { ?>
                 <div class="employment-header">
                     <strong><?php echo $information[COMPANY_NAME]; ?></strong>, <?php echo $information[COMPANY_LOCATION]; ?>
 
                     <span class="float-right"><?php echo $information[EMPLOYMENT_DATES]; ?></span><br/>
-                    <em><?php echo $category; ?></em>
+                    <em><?php echo $information[POSITION_NAME]; ?></em>
                 </div>
 <?php if (count($information[EMPLOYMENT_DETAILS_ARRAY]) > 0) { ?>
                 <ul class="employment-details">
